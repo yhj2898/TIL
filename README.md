@@ -70,7 +70,7 @@ $ rm -r test
 5.  기본 터미널이 Git Bash로 열리는지 확인한다.
 
 
-## 4. 
+## 4. Markdown
 > Markdown (마크다운)은 일반 텍스트 기반의 경량 Markup (마크업) 언어이다.
 
 ### Markup (마크업) 이란?
@@ -189,7 +189,49 @@ git log --oneline
 > `git push origin master`
 
 
+### 예시
+```bash
+LG@DESKTOP-NQ8EVCE MINGW64 ~/hello 
+$ git init
+Reinitialized existing Git repository in C:/Users/LG/hello/.git/
 
-## 6.
+LG@DESKTOP-NQ8EVCE MINGW64 ~/hello (master)
+$ git add README.md
 
-## 7. 
+LG@DESKTOP-NQ8EVCE MINGW64 ~/hello (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+LG@DESKTOP-NQ8EVCE MINGW64 ~/hello (master)
+$ git commit -m "add README.md"
+[master 97f2760] add README.md
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+LG@DESKTOP-NQ8EVCE MINGW64 ~/hello (master)
+$ git log --oneline
+97f2760 (HEAD -> master) add README.md
+c16dd87 (origin/master) add README.md
+651e8fc add README.md
+
+LG@DESKTOP-NQ8EVCE MINGW64 ~/hello (master)
+$ git remote add origin https://github.com/yhj2898/hello.git
+error: remote origin already exists.
+
+LG@DESKTOP-NQ8EVCE MINGW64 ~/hello (master)
+$ git remote -v
+origin  https://github.com/yhj2898/hello.git (fetch)
+origin  https://github.com/yhj2898/hello.git (push)
+
+LG@DESKTOP-NQ8EVCE MINGW64 ~/hello (master)
+$ git push origin master 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 286 bytes | 143.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/yhj2898/hello.git
+   c16dd87..97f2760  master -> master
+   ```
