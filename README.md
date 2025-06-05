@@ -178,10 +178,10 @@ git config --global user.email "메일주소"
 ### 3. 원격 저장소에 커밋 업로드
 
 1. 로컬 저장소에 커밋 생성
-`git status  
-git add day1.md  
-git commit -m "Upload TIL Day1"  
-git log --oneline
+`git status`  
+`git add day1.md` 
+`git commit -m "Upload TIL Day1"`  
+`git log --oneline`
 
 2. git push : 로컬 저장소의 커밋을 원격 저장소에 업로드
    
